@@ -1,141 +1,184 @@
 #left {
-	padding: 0;
-	margin: 0;
-	.wd-facet-group {
-		.facets {
-			background: #fff;
-			border: 0;
-			@include round(0);
-			.facet-type {
-				.facet-type-list {
-					.facet-title {
-						overflow: hidden;
-						&::before {
-    						display: none;
-						}
-						&::after {
-							@include aws-icon("\f077");
-							float: right;
-							position: relative;
-							top: 3px;
-						}
-						&.facet-closed {							
-							&::after {
-								@include aws-icon("\f078");
-							}
-						}
-						h3 {
-							float: left;
-						}
-					}
-					.option-title {
-						color: $base-color;
-					}
-				}
-				.facet-type-range .range-wrapper {
-					background: #fff;
-					border: 0;
-					* {
-						box-shadow: none;
-						color: $font-dark;
-					}
-					.handler {
-						.icon {
-							@include round(100%);
-							background-color: $font-light;
-							width: 12px;
-							height: 12px;
-							border: 1px solid $gray-medium;
-						}
-					}
-					.defined-range {
-						background: $lighten-color;
-					}
-					.submit {
-						@extend .btn;
-						@extend .btn-wide;
-						margin-top: 35px;
-					}
-				}
-			}			
-		}
-		.selected-facets {
-			background: $gray-extralight;
-			border: 0;
-			margin: 0;
-			@include round(2px);
-			&::before {
-				text-transform: uppercase;
-				font-size: 0.9em;
-			}
-			.selected-facet {
-				border: 0;
-				border-bottom: 1px solid $gray-light;
-				margin: 0;
-				@include round(0);
-				&:last-child() {
-					border: 0;
-				}
-				.selected-facet-name {
-					background: none;
-				}
-				ul {
-					li {
-						margin-top: 0;
-						margin-bottom: 5px;
-						border: 0;
-						font-weight: normal;
-					}
-				}
-			}
-		}		
-	}	
+    padding: 0;
+    margin: 0;
+
+    .wd-facet-group {
+        .facets {
+            background: #fff;
+            border: 0;
+            @include round(0);
+
+            .facet-type {
+                &.brand {
+                    .facet-type-list {
+                        .facet-title {
+                            h3 {
+                                font-size: 0;
+
+                                &::before {
+                                    font-size: 14px;
+                                    content: 'Editora';
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .facet-type-list {
+
+                    .facet-title {
+                        overflow: hidden;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            @include aws-icon("\f077");
+                            float: right;
+                            position: relative;
+                            top: 3px;
+                        }
+
+                        &.facet-closed {
+                            &::after {
+                                @include aws-icon("\f078");
+                            }
+                        }
+
+                        h3 {
+                            float: left;
+                        }
+                    }
+
+                    .option-title {
+                        color: $base-color;
+                    }
+                }
+
+                .facet-type-range .range-wrapper {
+                    background: #fff;
+                    border: 0;
+
+                    * {
+                        box-shadow: none;
+                        color: $font-dark;
+                    }
+
+                    .handler {
+                        .icon {
+                            @include round(100%);
+                            background-color: $font-light;
+                            width: 12px;
+                            height: 12px;
+                            border: 1px solid $gray-medium;
+                        }
+                    }
+
+                    .defined-range {
+                        background: $lighten-color;
+                    }
+
+                    .submit {
+                        @extend .btn;
+                        @extend .btn-wide;
+                        margin-top: 35px;
+                    }
+                }
+            }
+        }
+
+        .selected-facets {
+            background: $gray-extralight;
+            border: 0;
+            margin: 0;
+            @include round(2px);
+
+            &::before {
+                text-transform: uppercase;
+                font-size: 0.9em;
+            }
+
+            .selected-facet {
+                border: 0;
+                border-bottom: 1px solid $gray-light;
+                margin: 0;
+                @include round(0);
+
+                &:last-child() {
+                    border: 0;
+                }
+
+                .selected-facet-name {
+                    background: none;
+                }
+
+                ul {
+                    li {
+                        margin-top: 0;
+                        margin-bottom: 5px;
+                        border: 0;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
 }
+
 #showFacets {
-	display: none;
+    display: none;
 }
+
 @media screen and(max-width: 992px) {
-	#left {
-		width: 0;
-	    &.active {	 	
-	    	.wd-facet-group {
-		    	position: fixed;
-			    top: 0;
-			    right: 0;
-			    z-index: 99;
-			    width: 100%;
-			    height: 100%;
-			    overflow-y: scroll;
-			    overflow-x: hidden;
-	    	}
-	    }
-	}
-	#showFacets {
-		display: block;
-		width: 100%;
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		z-index: 100;
-		&:after {
-			content: ' Filtrar';
-		}
-		.icon:before {
-			@include aws-icon("\f0b0");
-		}
-		&.active {
-			width: 80px;
-			bottom: initial;
-			top: 0;
-			background-color: transparent;
-			color: $font-dark;
-			&:after {
-				content: '';
-			}
-			.icon:before {
-				@include aws-icon("\f00d");
-				font-size: 2em;
-			}
-		}
-	}
+    #left {
+        width: 0;
+
+        &.active {
+            .wd-facet-group {
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 99;
+                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+        }
+    }
+
+    #showFacets {
+        display: block;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+
+        &:after {
+            content: ' Filtrar';
+        }
+
+        .icon:before {
+            @include aws-icon("\f0b0");
+        }
+
+        &.active {
+            width: 80px;
+            bottom: initial;
+            top: 0;
+            background-color: transparent;
+            color: $font-dark;
+
+            &:after {
+                content: '';
+            }
+
+            .icon:before {
+                @include aws-icon("\f00d");
+                font-size: 2em;
+            }
+        }
+    }
 }

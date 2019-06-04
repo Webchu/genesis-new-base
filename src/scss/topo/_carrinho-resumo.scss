@@ -1,101 +1,131 @@
 .wd-checkout-basket-summaryheader {
-	> a {
-		b {
-			font-size: 0;
-			&:before {
-				@include aws-icon("\f07a");
-				font-size: 27px;
-				position: relative;
-				top: 4px;
-			}
-		}
-		.basket-size-wrapper {
-			background-color: $base-color-2;
-			color: $font-light;
-			width: 25px;
-			height: 25px;
-			position: absolute;
-		    left: 20px;
-		    bottom: -13px;
-		    font-size: 0.8em;
-		    text-align: center;
-		    line-height: 19px;
-		    border: 2px solid #fff;
-		    font-weight: bold;
-			@include round(100%);	
-		}
-	}
-	&.empty {
-		.wd-widget {
-			padding: 20px 15px;
-			text-align: center;
-			> div {
-				display: none;
-			}
-			&:before {
-				content: ':(';
-				font-size: 35px;
-				color: $base-color;
-				padding-bottom: 10px;
-				display: block;
-			}
-			&:after {
-				content:'Seu carrinho está vazio';
-				font-size: 1.5em;
-				line-height: 35px;
-			}
-		}
-	}
-	.wd-widget {
-		background-color: #fff;
-		border: 1px solid $gray-light;
-		padding: 15px;
-		top: 35px;
-		.wd-header {
-			font-size: 18px;
-			text-align: left;
-			padding: 0;
-		}
-		.wd-content {
-			padding: 0;
-			padding-bottom: 15px;
-			margin: 0;
-			ul {
-				padding: 0;
-				li {
-					&.name {
-						.freeitem {
-							display: none;
-						}
-					}
-					.price {
-						font-weight: bold;
-						font-size: 1.2em;
-					}		
-				}
-			}
-			
-			.subtotal {
-				padding: 0;
-				height: auto;
-				li {
-					margin: 0;
-				}
-				.value {
-					position: initial;
-					float: right;
-				}
-			}
-		}
-		.wd-footer {
-			padding: 15px 0 0 0;
-			border-top: 1px solid $gray-light;
-			.go-to-basket {
-				background-color: $btn-buy;
-			}
-			.go-to-checkout {
-				display: none;
-			}
-		}
-	}
+    &:hover {
+        @media screen and (max-width: 768px) {
+            .summaryheader-content.wd-widget {
+                display: none !important;
+            }
+        }
+    }
+
+    >a {
+        b {
+            font-size: 0;
+
+            &:before {
+                @include aws-icon("\f07a");
+                font-size: 27px;
+                position: relative;
+                top: 4px;
+                color: $base-color;
+            }
+        }
+
+        .basket-size-wrapper {
+            background-color: $base-color-2;
+            color: $font-light;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 20px;
+            bottom: -13px;
+            font-size: 0.8em;
+            text-align: center;
+            line-height: 19px;
+            border: 2px solid #fff;
+            font-weight: bold;
+            @include round(100%);
+
+            .basket-size {
+                color: white;
+            }
+        }
+    }
+
+    &.empty {
+        .wd-widget {
+            padding: 20px 15px;
+            text-align: center;
+
+            >div {
+                display: none;
+            }
+
+            &:before {
+                content: ":(";
+                font-size: 35px;
+                color: $base-color;
+                padding-bottom: 10px;
+                display: block;
+            }
+
+            &:after {
+                content: "Seu carrinho está vazio";
+                font-size: 1.5em;
+                line-height: 35px;
+            }
+        }
+    }
+
+    .wd-widget {
+        background-color: #fff;
+        border: 1px solid $gray-light;
+        padding: 15px;
+        top: 35px;
+
+        .wd-header {
+            font-size: 18px;
+            text-align: left;
+            padding: 0;
+        }
+
+        .wd-content {
+            padding: 0;
+            padding-bottom: 15px;
+            margin: 0;
+
+            ul {
+                padding: 0;
+
+                li {
+                    &.name {
+                        .freeitem {
+                            display: none;
+                        }
+                    }
+
+                    .price {
+                        font-weight: bold;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+
+            .subtotal {
+                padding: 0;
+                height: auto;
+
+                li {
+                    margin: 0;
+                }
+
+                .value {
+                    position: initial;
+                    float: right;
+                }
+            }
+        }
+
+        .wd-footer {
+            padding: 15px 0 0 0;
+            border-top: 1px solid $gray-light;
+
+            .go-to-basket {
+                background-color: $btn-buy;
+            }
+
+            .go-to-checkout {
+                display: none;
+            }
+        }
+    }
 }

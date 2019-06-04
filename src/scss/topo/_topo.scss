@@ -1,154 +1,208 @@
 header {
-	.top-bar {
-		background-color: $gray-light;
-		font-size: 0.9em;
-		padding: 10px 0;
-	}
-	.ofertas {
-		text-align: left;
-		text-transform: uppercase;
-    	font-size: 0.9em;
-	}
-	.links {
-		text-align: right;
-	}
+    .top-bar {
+        background-color: $gray-light;
+        font-size: 0.9em;
+        padding: 10px 0;
+    }
 
-	.ofertas, .links {
-		i {
-			margin-right: 5px;
-		}
-	}
-	&.flutuante {
-		.top-bar {
-			margin-bottom: 82px;
-		}
-		.main-bar {
-			position: fixed;
-			top: 0;
-			z-index: 55;
-		    width: 100%;
-		    box-shadow: 1px 1px 1px 1px $gray-semilight;
-		}
-	}
-	.main-bar {
-		padding: 20px 0;
-		background: #fff;
-		&.simples {
-		    box-shadow: 1px 1px 1px 1px $gray-semilight;
-		}
-		.wd-search {
-			.input-wrapper {	
-				margin-bottom: 0;			
-				input {
-					@include round-right(0);
-				}
-			}
-			button {
-			    position: absolute;
-			    right: 4px;
-			    top: 0;
-			    width: auto;
-			    @include round-left(0);
-			}
-		}
-		.wd-profile-welcome-shopper {
-			position: relative;
-			line-height: 30px;
-			&:hover {
-				.widget-content {
-					display: block;
-				}
-			}
-			i.fa-user {
-				font-size: 24px;
-    			padding-right: 5px;
-    			color: $base-color;
-			}
-			.widget-title {
-			line-height: 45px;				
-				.title {
-					color: $font-dark;
-					cursor: pointer;
-					display: inline-block;
-					span, i {
-						color: $base-color;
-					}
-				}
-			}
-			.widget-content {
-				display: none;
-			    position: absolute;
-			    left: 0px;
-			    top: 30px;
-			    min-height: 100px;
-			    width: 150px;
-			    padding: 15px;
-			    box-sizing: border-box;
-			    border: 1px solid $gray-light;
-			    background: #fff;
-			    overflow: visible;
-			    z-index: 2;
-			    .login-wrapper, .new-account {
-			    	display: block;
-			    	text-align: center;
-			    }
-			    .wd-profile-login {
-		    		display: none !important;
-		    	}
-		    	.login-title {
-		    		background-color: $btn-buy;
-		    		color: $font-light;
-		    		margin-bottom: 10px;
-		    		@include round(2px);
-		    	}
-		    	.shopper-authenticated {
-		    		a {
-		    			line-height: auto;
-		    			display: block;
-		    			&.put-pipe {
-		    				padding: 0;
-		    				&:before {
-		    					display: none;
-		    				}
-		    				b {
-		    					font-weight: normal;
-		    				}
-		    			}
-		    		}
-		    	}
-			}
-		}
+    .ofertas {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
 
-		.main-wishlist {
-			font-size: 30px;
-			text-align: center;
-			a {
-				color: $base-color-2;
-				&:hover {
-					color: darken( $base-color-2, 10% );
-				}
-			}
-		}
-	}
+    .links {
+        text-align: right;
+    }
+
+    .ofertas,
+    .links {
+        a {
+            color: $base-color-1;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    &.flutuante {
+        .top-bar {
+            margin-bottom: 82px;
+        }
+
+        .main-bar {
+            position: fixed;
+            top: 0;
+            z-index: 55;
+            width: 100%;
+            box-shadow: 1px 1px 1px 1px $gray-semilight;
+        }
+    }
+
+    .main-bar {
+        padding: 20px 0;
+        background: #fff;
+
+        &.simples {
+            box-shadow: 1px 1px 1px 1px $gray-semilight;
+        }
+
+        .wd-search {
+            overflow: visible;
+
+            .input-wrapper {
+                margin-bottom: 0;
+
+                input {
+                    @include round-right(0);
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 4px;
+                top: 0;
+                width: auto;
+                background-color: $base-color-1;
+                @include round-left(0);
+            }
+        }
+
+        .wd-profile-welcome-shopper {
+            position: relative;
+            line-height: 30px;
+
+            &:hover {
+                .widget-content {
+                    display: block;
+                }
+            }
+
+            i.fa-user {
+                font-size: 24px;
+                padding-right: 5px;
+                color: $base-color-1;
+            }
+
+            .widget-title {
+                line-height: 45px;
+
+                .title {
+                    color: $font-dark;
+                    cursor: pointer;
+                    display: inline-block;
+
+                    span,
+                    i {
+                        color: $base-color-1;
+                    }
+                }
+            }
+
+            .widget-content {
+                display: none;
+                position: absolute;
+                left: 0px;
+                top: 30px;
+                min-height: 100px;
+                width: 150px;
+                padding: 15px;
+                box-sizing: border-box;
+                border: 1px solid $gray-light;
+                background: #fff;
+                overflow: visible;
+                z-index: 2;
+
+                .login-wrapper,
+                .new-account {
+                    display: block;
+                    text-align: center;
+                }
+
+                .wd-profile-login {
+                    display: none !important;
+                }
+
+                .login-title {
+                    background-color: $btn-buy;
+                    color: $font-light;
+                    margin-bottom: 10px;
+                    @include round(2px);
+                }
+
+                .shopper-authenticated {
+                    a {
+                        line-height: auto;
+                        display: block;
+
+                        &.put-pipe {
+                            padding: 0;
+
+                            &:before {
+                                display: none;
+                            }
+
+                            b {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-wishlist {
+            font-size: 30px;
+            text-align: center;
+
+            a {
+                color: $base-color-2;
+
+                &:hover {
+                    color: darken($base-color-2, 10%);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
-	header .links {
-		display: none;
-	}
-	.wd-profile-welcome-shopper {
-		display: none;
-	}
-	#top-search {
-		margin-top: 15px;
-	}
-	.icons-resume {
-		padding: 0;
-		.main-wishlist, .dropdown-cart {
-			padding: 0;
-		}
-		.dropdown-cart {
-			font-size: 1.2em;
-		}
-	}
+    header .links {
+        display: none;
+    }
+
+    .wd-profile-welcome-shopper {
+        display: none;
+    }
+
+    #top-search {
+        margin-top: 15px;
+    }
+
+    .icons-resume {
+        padding: 0;
+
+        .main-wishlist,
+        .dropdown-cart {
+            padding: 0;
+        }
+
+        .dropdown-cart {
+            font-size: 1.2em;
+        }
+    }
+
+    #header {
+        .main-bar {
+            .wrapper {
+                .icons-resume {
+                    >.row {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
 }

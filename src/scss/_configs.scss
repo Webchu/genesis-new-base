@@ -1,8 +1,8 @@
 // nome da pasta do tema
-$theme-path: 'Base';
-
+$theme-path: "Base";
 // colors
 $base-color: #06799F;
+$base-color-1: #06799F;
 $base-color-2: #FF8973;
 $darken-color: mix($base-color, black, 80%);
 $lighten-color: mix($base-color, white, 80%);
@@ -31,47 +31,36 @@ $flag: #22884F;
 // fonts settings
 $font-family: Lato;
 $font-size: 14px;
-
 // structure
 $wrapper: 1180px;
-
 // quantidade de produtos por linha em vitrine carrossel
 $qtd-products-vitrine: 4;
-
-
-$grid-pp: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (max-width: 575px)"
+$grid-pp: (columns: 12,
+gutter: 20px,
+media: "screen and (max-width: 575px)"
 );
-$grid-p: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (min-width: 575px) and (max-width:767px)"
+$grid-p: (columns: 12,
+gutter: 20px,
+media: "screen and (min-width: 575px) and (max-width:767px)"
 );
-$grid-m: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (min-width: 768px) and (max-width:991px)"
+$grid-m: (columns: 12,
+gutter: 20px,
+media: "screen and (min-width: 768px) and (max-width:991px)"
 );
-$grid-g: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (min-width: 992px) and (max-width:1179px)"
+$grid-g: (columns: 12,
+gutter: 20px,
+media: "screen and (min-width: 992px) and (max-width:1179px)"
 );
-$grid-gg: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (min-width: 1180px)"
+$grid-gg: (columns: 12,
+gutter: 20px,
+media: "screen and (min-width: 1180px)"
 );
-$grid-smartphone: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (max-width:767px)"
+$grid-smartphone: (columns: 12,
+gutter: 20px,
+media: "screen and (max-width:767px)"
 );
-$grid-tablet-desktop: (
-     columns: 12,
-     gutter: 20px,
-     media: "screen and (min-width:768px)"
+$grid-tablet-desktop: (columns: 12,
+gutter: 20px,
+media: "screen and (min-width:768px)"
 );
 $breakpoint-mobile: 768px;

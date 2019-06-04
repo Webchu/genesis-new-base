@@ -1,96 +1,122 @@
 #footer {
-	> .wrapper {
-		> div {
-	    	padding: 50px 0;
-	    	border-bottom: 1px solid $gray-medium;
-	    	overflow: hidden;
-	    	&:last-child {
-	    		border-bottom: 0;
-	    	}
-	    }
-	}
+    >.wrapper {
+        >div {
+            padding: 50px 0;
+            border-bottom: 1px solid $gray-medium;
+            overflow: hidden;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
     border-top: 2px solid #dfdfdf;
     background: #f6f6f6;
+
     h2 {
-    	text-align: center;
+        text-align: center;
         padding: 0 15px;
     }
+
     .footer-newsletter {
-    	text-align: center;
-    	.wd-marketing-newsletter {
-    		max-width: 500px;
-    		margin: 0 auto;
-            .wd-header, .input-name-marketing-newsletter, label, p {
+        text-align: center;
+
+        .wd-marketing-newsletter {
+            max-width: 500px;
+            margin: 0 auto;
+
+            .wd-header,
+            .input-name-marketing-newsletter,
+            label,
+            p {
                 display: none;
             }
-    		.input-email-marketing-newsletter {
-				width: 79%;
-				float: left;
+
+            .input-email-marketing-newsletter {
+                width: 79%;
+                float: left;
+
                 @include grid-media($grid-smartphone) {
                     width: 70%;
                 }
+
                 input {
                     @include round-right(0);
                 }
-			}
-			.input-button-marketing-newsletter {
-				float: left;
-				width: 21%;
+            }
+
+            .input-button-marketing-newsletter {
+                float: left;
+                width: 21%;
+
                 @include grid-media($grid-smartphone) {
                     width: 30%;
                 }
-				button {
+
+                button {
                     @extend .btn-wide;
                     @include round-left(0);
-				}
-			}
-    	}
+                }
+            }
+        }
     }
+
     .footer-atendimento {
-    	.contato {
-	    	max-width: 740px;
-	    	margin: 0 auto;
-    		padding: 30px 0 15px 0;
-    		overflow: hidden;
-            > div {
+        .contato {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 30px 0 15px 0;
+            overflow: hidden;
+
+            >div {
                 @include grid-media($grid-smartphone) {
                     text-align: center;
                     margin: 15px 0;
                 }
             }
-    		i {
-    			float: left;
-			    font-size: 44px;
-			    margin-right: 18px;
+
+            i {
+                float: left;
+                font-size: 44px;
+                margin-right: 18px;
+
                 @include grid-media($grid-pp) {
-                    display: none
+                    display: none;
                 }
-    		}
-    		strong {
-    			display: block;
-    			margin: 3px 0 5px 0;
-    		}
-    		a:not(.btn) {
-    			font-size: 1.3em;
-    		}
-    		.phone {
-    			a {
-    				color: $font-dark;
-    			}
-    		}
-    	}
-    	.horario {
-    		color: $gray-dark;
-    		text-align: center;
-    	}
+            }
+
+            strong {
+                display: block;
+                margin: 3px 0 5px 0;
+            }
+
+            a:not(.btn) {
+                font-size: 1em;
+            }
+
+            .phone {
+                a {
+                    color: $font-dark;
+                }
+            }
+        }
+
+        .horario {
+            color: $gray-dark;
+            text-align: center;
+        }
     }
-    .footer-category {        
+
+    .footer-category {
         h2 {
             text-align: left;
             padding: 0;
         }
-    	.cms-page-menu {
-    		float:right;
+
+        .cms-page-menu {
+            float: right;
+
             .cms-page {
                 &.active {
                     small {
@@ -100,12 +126,14 @@
                             }
                         }
                     }
+
                     .wd-page-menu {
-                        > ul {
+                        >ul {
                             display: block;
                         }
                     }
                 }
+
                 small {
                     @include grid-media($grid-smartphone) {
                         &::after {
@@ -114,119 +142,155 @@
                         }
                     }
                 }
+
                 .wd-page-menu {
-                    > ul {
-                        padding-bottom: 15px;                    
+                    >ul {
+                        padding-bottom: 15px;
+
                         @include grid-media($grid-smartphone) {
                             display: none;
                         }
-                        li {                        
+
+                        li {
                             margin: 0;
                             margin-top: 15px;
+
                             a {
                                 font-size: 0.9em;
                             }
                         }
                     }
                 }
-    		}
-    	}
+            }
+        }
     }
+
     .footer-social {
         * {
             text-align: center;
         }
-    	.box {
-    		max-width: 450px;
-    		margin: 0 auto;
-    		overflow: hidden;
-    	}
-    	.icons {
-    		a {
-    			padding: 1.3em 0.8em;
+
+        .box {
+            max-width: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .icons {
+            a {
+                padding: 1.3em 0.8em;
                 display: inline-block;
-    		}
-    		i {
-    			font-size: 30px;
-    		}
-    	}
+            }
+
+            i {
+                font-size: 30px;
+            }
+        }
     }
-    .certificados, .assinatura {
-    	background-color: #fff;
-    	color: $gray-dark;
+
+    .certificados,
+    .assinatura {
+        background-color: #fff;
+        color: $gray-dark;
     }
+
     .certificados {
-    	border-top: 1px solid $gray-medium;
-    	padding: 30px 0;
+        border-top: 1px solid $gray-medium;
+        padding: 30px 0;
+
         &.simples {
             border-top: 0;
         }
+
         .col {
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        .title, .shields {
+
+        .title,
+        .shields {
             float: left;
         }
+
         .title {
             margin-right: 10px;
         }
+
         .shields {
-            > a {
+            >a {
                 float: left;
                 margin: 5px 10px;
+
                 &.shield-letsencrypt {
                     width: 77px;
                     height: 63px;
                     background-image: url(/custom/content/themes/#{$theme-path}/Imagens/lets-encrypt.png);
                 }
             }
+
             .payment {
                 width: 32px;
                 height: 20px;
-                margin: 5px;                
+                margin: 5px;
                 float: left;
-                background-color: #FFF;                
+                background-color: #fff;
                 background-repeat: no-repeat;
+
                 &.payment-pay-amex {
                     background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-amex.png);
                 }
+
                 &.payment-pay-code {
                     background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-code.png);
                 }
+
                 &.payment-pay-master {
                     background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-master.png);
                 }
+
                 &.payment-pay-visa {
                     background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-visa.png);
                 }
             }
         }
     }
+
     .assinatura {
-    	.wrapper {
-    		> .row {
-    			border-bottom: 1px solid $gray-light;
-	    		border-top: 1px solid $gray-light;
-	    		padding: 30px 0;
-	    		overflow: hidden;
-    		}
-    	}
+        .wrapper {
+            >.row {
+                border-bottom: 1px solid $gray-light;
+                border-top: 1px solid $gray-light;
+                padding: 30px 0;
+                overflow: hidden;
+            }
+        }
+
         .aboutme {
             p {
                 margin: 0;
+                text-align: justify;
             }
         }
-    	.copyright, .creators {
-    		text-align: center;
-    	}
-    	.creators {
-    		padding-top: 20px;
-    		overflow: hidden;
+
+        .copyright,
+        .creators {
+            text-align: center;
+        }
+
+        .creators {
+            padding-top: 20px;
+            overflow: hidden;
+
             small {
                 display: block;
                 margin-bottom: 5px;
             }
-    	}
+
+            .logo-creator {
+                img {
+                    width: 230px;
+                }
+            }
+        }
     }
 }
