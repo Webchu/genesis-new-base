@@ -8,16 +8,41 @@
             border: 0;
             @include round(0);
 
-            .facet-type {
-                &.brand {
-                    .facet-type-list {
-                        .facet-title {
-                            h3 {
-                                font-size: 0;
+            .wd-facet-type-rating {
+                .facet-type-list {
+                    ul {
+                        li {
+                            h4 {
+                                a {
+                                    .option-title {
+                                        width: 76px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-                                &::before {
-                                    font-size: 14px;
-                                    content: 'Editora';
+            .facet-type {
+                &.colors {
+                    .facet-type-list {
+                        ul {
+                            li {
+                                h4 {
+                                    a {
+                                        .markup-color {
+                                            display: block;
+                                            width: 18px;
+                                            height: 18px;
+                                            @include round(100%);
+                                            border: 2.5px solid white;
+                                            margin: 0.3rem;
+                                            margin-top: 0;
+                                            margin-left: 2px;
+                                            box-shadow: 0px 0px 0px 1px #ccc;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -25,6 +50,29 @@
                 }
 
                 .facet-type-list {
+                    ul {
+                        padding: 0;
+
+                        li {
+                            h4 {
+                                a {
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .option-title {
+                                        width: 120px;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+
+                                    .markup-color {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                     .facet-title {
                         overflow: hidden;

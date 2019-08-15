@@ -2,12 +2,16 @@
 $theme-path: "Base";
 // colors
 $base-color: #06799F;
-$base-color-1: #06799F;
-$base-color-2: #FF8973;
+$base-color-2:mix($base-color, white, 75%);
 $darken-color: mix($base-color, black, 80%);
 $lighten-color: mix($base-color, white, 80%);
-$font-dark: #444444;
 
+$gray: #404c58;
+$gray-25: mix($gray, white, 75%);
+$gray-75: mix($gray, white, 25%);
+
+
+$font-dark: #444444;
 $font-light: #fff;
 $gray-dark: #777;
 $gray-medium: #ccc;
@@ -15,7 +19,7 @@ $gray-semilight: #ddd;
 $gray-light: #eee;
 $gray-extralight: #f1f1f1;
 
-$btn-buy:#22884F;
+$btn-buy:#388E3C;
 $price-off: #A1000C;
 $cart-total: #22884F;
 $cart-destaque: #22884F;
@@ -29,7 +33,8 @@ $danger:#f2dede;
 $flag: #22884F;
 
 // fonts settings
-$font-family: Lato;
+$font-family: 'Lato',
+sans-serif;
 $font-size: 14px;
 // structure
 $wrapper: 1180px;

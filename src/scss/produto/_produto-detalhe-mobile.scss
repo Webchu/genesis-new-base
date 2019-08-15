@@ -1,0 +1,88 @@
+@media screen and (max-width: 767px) {
+    body {
+        &[class*=context-product] {
+            #middle {
+                padding-top: 0;
+
+                #content {
+                    .wd-browsing-breadcrumbs {
+                        margin-bottom: 0;
+
+                        ul {
+                            li {
+
+                                &.first,
+                                &.last {
+                                    display: none;
+                                }
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                &::before {
+                                    font-family: "Font Awesome 5 Free";
+                                    content: '\f104';
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
+                    .product-detail {
+                        .wd-product-media-selector {
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0;
+                            border-bottom: 0;
+
+                            ul {
+                                li {
+                                    width: 8px;
+                                    height: 8px;
+                                    @include round(100%);
+                                    background-color: $gray-25;
+                                    border: 0;
+
+                                    &.selected {
+                                        background-color: $gray-25;
+                                    }
+
+                                    img {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .information {
+                            h1 {
+                                &.name {
+                                    font-weight: 500;
+                                    font-size: 2.3em;
+                                    line-height: 28px;
+                                    color: black;
+                                }
+                            }
+
+                            .wd-product-rating {
+                                padding-top: 0;
+                            }
+
+                            .buy {
+                                margin-top: 0;
+
+                                .buy-box {
+                                    .wd-product-price-description {
+                                        .priceContainer {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

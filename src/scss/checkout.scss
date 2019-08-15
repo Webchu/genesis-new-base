@@ -11,7 +11,7 @@ body.EasyCheckoutStep {
     .wd-easy-checkout {
         .header {
             .logo {
-                background-image: url("/Custom/Content/Themes/#{$theme-path}/Imagens/logosite.jpg?nocache") !important;
+                background-image: url(/custom/content/themes/#{$theme-path}/Imagens/logo.png?nocache);
                 background-size: contain;
                 height: 85px;
                 background-position: left center;

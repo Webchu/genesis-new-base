@@ -4,6 +4,7 @@
     .wd-header {
         span.wd-icon {
             display: inline-block;
+            display: none;
         }
 
         .wd-title {
@@ -18,6 +19,7 @@
 
         .wd-header {
             padding: 15px;
+            padding-left: 0;
             margin-bottom: 10px;
             font-size: 2em;
             position: relative;
@@ -45,6 +47,7 @@
         &:after {
             @include aws-icon("\f105");
             color: $gray-dark;
+            margin-left: 5px;
         }
 
         a {
@@ -52,9 +55,48 @@
         }
     }
 
+    li {
+        a {
+            margin-left: 4px;
+        }
+    }
+
     .last {
         strong {
             font-weight: bold;
+        }
+    }
+}
+
+.wd-product-rating {
+    margin-bottom: 10px;
+
+    .rating-average {
+        background: url(/custom/content/themes/Base/Imagens/rating.png?nocache) !important;
+        background-repeat: no-repeat !important;
+        background-position: -109px 0 !important;
+        width: 105px !important;
+        background-size: cover !important;
+        height: 14px !important;
+
+        &.rate-1 {
+            background-position: -86px 0 !important;
+        }
+
+        &.rate-2 {
+            background-position: -65px 0 !important;
+        }
+
+        &.rate-3 {
+            background-position: -43px 0 !important;
+        }
+
+        &.rate-4 {
+            background-position: -20px 0 !important;
+        }
+
+        &.rate-5 {
+            background-position: 0px 0 !important;
         }
     }
 }
@@ -70,13 +112,17 @@
     .jcarousel-control-next {
         line-height: 60px;
 
+        &.inactive {
+            display: none;
+        }
+
         i {
-            color: $base-color;
+            color: $gray;
             font-size: 30px;
             top: 15px;
 
             &:hover {
-                color: $darken-color;
+                color: $gray-25;
             }
         }
     }
@@ -84,11 +130,9 @@
 
 /* banners */
 .wd-marketing-banner {
-    @include grid-media($grid-smartphone) {
-        height: auto !important;
-        line-height: normal !important;
-        max-width: 100%;
-    }
+    height: auto !important;
+    line-height: 0 !important;
+    max-width: 100%;
 
     .banner-wrapper,
     a {
@@ -137,9 +181,6 @@
             }
         }
 
-        .banner-wrapper {
-            display: block;
-        }
     }
 
     &:not(.menu-oferta) {
@@ -180,5 +221,88 @@
         .banner-wrapper {
             text-align: center !important;
         }
+    }
+}
+
+.grid-products {
+    #middle {
+        #content {
+            .wd-browsing-grid {
+                .wd-header {
+                    padding: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.wd-profile-login-oauth {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 150px;
+
+    @media screen and(max-width: 991px) {
+        margin: 0;
+        height: 120px !important;
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+
+        .facebook-modal {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .loginTwitter {
+            margin: 0 auto;
+        }
+    }
+
+    .loginTwitter {
+        width: 166px;
+        height: 48px;
+        background: url(/custom/content/themes/Base/Imagens/oauth-tt.png?nocache);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .loginFacebook {
+        width: 166px;
+        height: 48px;
+        background: url(/custom/content/themes/Base/Imagens/oauth-fb.png?nocache);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.loading-grid,
+.loading-menu {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background: white;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 99;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        background: url(/custom/content/themes/Base/Imagens/loading-cart.svg?nocache);
+        background-repeat: no-repeat;
+        display: block;
+        z-index: 999;
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+        position: relative;
+        top: 45vh;
     }
 }

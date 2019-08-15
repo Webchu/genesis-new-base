@@ -1,4 +1,14 @@
 .wd-checkout-basket-summaryheader {
+    height: 36px;
+
+    &.empty {
+        .wd-widget {
+            &::before {
+                content: '' !important;
+            }
+        }
+    }
+
     &:hover {
         @media screen and (max-width: 768px) {
             .summaryheader-content.wd-widget {
@@ -27,7 +37,7 @@
             height: 25px;
             position: absolute;
             left: 20px;
-            bottom: -13px;
+            bottom: -5px;
             font-size: 0.8em;
             text-align: center;
             line-height: 19px;
@@ -70,12 +80,35 @@
         background-color: #fff;
         border: 1px solid $gray-light;
         padding: 15px;
-        top: 35px;
+        top: 43px;
+        right: -75px;
+        overflow: visible;
+        border: 1px solid $gray-75;
+
+        &::before {
+            content: '';
+            background: url(/custom/content/themes/Base/Imagens/ponta5.png?nocache);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            top: -9px;
+            right: 80px;
+            z-index: 99;
+        }
 
         .wd-header {
             font-size: 18px;
             text-align: left;
-            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 15px;
+
+            .wd-title {
+                color: $gray-25;
+                font-size: 18px;
+            }
         }
 
         .wd-content {
@@ -88,14 +121,30 @@
 
                 li {
                     &.name {
+                        width: 80%;
+                        color: $gray-25;
+                        margin: 0;
+                        padding: 0;
+                        padding-top: 15px;
+                        padding-left: 10px;
+                        height: auto;
+                        display: flex;
+
                         .freeitem {
                             display: none;
                         }
                     }
 
-                    .price {
+                    &.price {
                         font-weight: bold;
-                        font-size: 1.2em;
+                        font-size: 16px;
+                        padding: 0;
+                        width: 80%;
+                        text-align: left;
+                        margin: 0;
+                        line-height: 1;
+                        padding-left: 10px;
+                        color: $gray-25;
                     }
                 }
             }
@@ -106,21 +155,31 @@
 
                 li {
                     margin: 0;
+                    color: $gray-25;
+                    font-weight: normal;
                 }
 
                 .value {
                     position: initial;
                     float: right;
+                    font-weight: bold;
+                    color: $gray-25;
+                    font-size: 16px;
                 }
             }
         }
 
         .wd-footer {
-            padding: 15px 0 0 0;
-            border-top: 1px solid $gray-light;
+            padding: 0;
+            border-top: none;
 
             .go-to-basket {
                 background-color: $btn-buy;
+                width: 100%;
+                border-radius: 0;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 11px;
             }
 
             .go-to-checkout {
