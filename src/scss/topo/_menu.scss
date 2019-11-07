@@ -214,6 +214,10 @@
             width: 300px;
             z-index: 2;
             transition: all 0.3s cubic-bezier(0.4, 0.2, 0, 1) 0ms;
+
+            .wd-marketing-banner {
+                margin-top: 20px;
+            }
         }
     }
 }

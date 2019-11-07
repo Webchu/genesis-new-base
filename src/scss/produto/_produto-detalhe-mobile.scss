@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
     body {
         &[class*=context-product] {
             #middle {
@@ -42,7 +42,7 @@
                                     width: 8px;
                                     height: 8px;
                                     @include round(100%);
-                                    background-color: $gray-25;
+                                    background-color: $gray-75;
                                     border: 0;
 
                                     &.selected {
@@ -60,9 +60,10 @@
                             h1 {
                                 &.name {
                                     font-weight: 500;
-                                    font-size: 2.3em;
-                                    line-height: 28px;
+                                    font-size: 20px;
+                                    line-height: 20px;
                                     color: black;
+                                    margin-bottom: 10px;
                                 }
                             }
 
@@ -76,6 +77,72 @@
                                 .buy-box {
                                     .wd-product-price-description {
                                         .priceContainer {}
+                                    }
+
+                                    .quantidade {
+                                        margin-top: 10px;
+
+                                        .wd-product-amount {
+                                            margin-top: 8px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .variacoes {
+                                .wd-product-variations {
+                                    .title {
+                                        color: $gray-25;
+                                    }
+                                }
+                            }
+                        }
+
+                        .descriptions {
+                            .wd-descriptions {
+                                .wd-header {
+                                    display: none;
+                                }
+
+                                .wd-content {
+                                    .wd-descriptions-panel {
+                                        padding: 0;
+                                        border-top: 1px solid $gray-75;
+                                        border-bottom: 1px solid $gray-75;
+
+                                        &.other {
+                                            border-top: 0;
+                                        }
+
+                                        .header {
+                                            padding: 16px 0;
+
+                                            .wd-icon {
+                                                position: absolute;
+                                                right: 0;
+
+                                                &::before {
+                                                    content: '';
+                                                    @include aws-icon("\f105");
+                                                    font-size: 20px;
+                                                    display: block;
+                                                    line-height: 26px;
+                                                    color: $gray-25;
+                                                }
+                                            }
+
+                                            .wd-title {
+                                                font-size: 20px;
+                                                color: $gray-25;
+                                                font-weight: 700;
+                                            }
+                                        }
+
+                                        .wd-descriptions-text {
+                                            &.hide {
+                                                display: none;
+                                            }
+                                        }
                                     }
                                 }
                             }

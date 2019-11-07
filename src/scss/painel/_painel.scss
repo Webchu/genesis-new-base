@@ -136,7 +136,8 @@ body {
                             width: 100%;
 
                             @media screen and (min-width: 992px) {
-                                width: 50%;
+                                width: 44.2%;
+                                margin-left: 30px;
                             }
                         }
                     }
@@ -439,8 +440,6 @@ body {
                         display: flex;
                         justify-content: space-between;
                     }
-
-                    .wd-content {}
                 }
             }
         }

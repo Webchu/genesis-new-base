@@ -187,11 +187,12 @@
                 position: fixed;
                 top: 0;
                 right: 0;
-                z-index: 99;
+                z-index: 99999999;
                 width: 100%;
                 height: 100%;
                 overflow-y: scroll;
                 overflow-x: hidden;
+                background-color: white;
             }
         }
     }
@@ -202,7 +203,7 @@
         position: fixed;
         bottom: 0;
         right: 0;
-        z-index: 100;
+        z-index: 999999999;
 
         &:after {
             content: ' Filtrar';

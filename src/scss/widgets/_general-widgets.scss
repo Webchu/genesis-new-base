@@ -39,6 +39,10 @@
 .wd-browsing-breadcrumbs {
     margin-bottom: 20px;
 
+    @media screen and(max-width: 991px) {
+        margin-bottom: 5px;
+    }
+
     .location {
         display: none;
     }
@@ -58,6 +62,10 @@
     li {
         a {
             margin-left: 4px;
+        }
+
+        a[href="/"] {
+            margin-left: 0;
         }
     }
 
@@ -145,14 +153,22 @@
     &.slider {
         .slider-controller {
             position: absolute;
-            right: 0;
-            left: 0;
+            right: 0 !important;
+            left: 0 !important;
             bottom: 0;
+            top: unset;
             display: block;
             margin: 0;
             padding: 0.5em 2em;
             line-height: normal;
             text-align: center;
+
+            @media screen and(max-width: 768px) {
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                bottom: 0 !important;
+            }
 
             li {
                 font-size: 0.8rem;

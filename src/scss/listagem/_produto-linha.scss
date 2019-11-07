@@ -1,6 +1,10 @@
 .wd-product-line {
     padding: 25px;
 
+    @media screen and (max-width: 575px) {
+        padding: 0;
+    }
+
     .medias {
         .wd-product-line-wishlist {
             button {
@@ -143,7 +147,7 @@
             font-size: 1.15em;
             font-weight: bold;
             margin-bottom: 0;
-            height: 40px;
+            height: 60px;
 
             a {
                 color: $gray-25;
@@ -219,7 +223,7 @@
             color: transparent;
             font-size: 0;
             min-height: 40px;
-            background-color: mix(#388E3C, white, 70%);
+            background-color: mix($btn-buy, white, 70%);
 
             &::before {
                 content: "";
@@ -293,6 +297,8 @@
 
             .list {
                 .wd-product-line {
+                    padding: 25px !important;
+
                     .wd-product-line-medias-variations {
                         &.wd-widget-js {
                             height: 32px !important;

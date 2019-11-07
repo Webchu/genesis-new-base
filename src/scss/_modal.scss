@@ -71,6 +71,20 @@
     max-width: 45%;
     min-height: 300px;
     height: auto;
+    margin-top: 0 !important;
+    top: 10% !important;
+
+    @media screen and(max-width: 768px) {
+        max-width: 90%;
+
+        .the-modal-container {
+            .button-wrapper {
+                button {
+                    width: auto !important;
+                }
+            }
+        }
+    }
 
     &.opened {
         top: 30%;

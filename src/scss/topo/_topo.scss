@@ -52,6 +52,10 @@ header {
 
             #top-search {
                 margin-top: 9px;
+
+                @media screen and(max-width: 991px) {
+                    margin-top: 14px;
+                }
             }
         }
 
@@ -93,6 +97,20 @@ header {
                 width: auto;
                 background-color: $base-color;
                 @include round-left(0);
+            }
+
+            @media screen and(max-width: 991px) {
+                .input-wrapper {
+                    input {
+                        height: 36px;
+
+                    }
+                }
+
+                button {
+                    height: 36px;
+                    padding: 0 1.2em;
+                }
             }
 
         }

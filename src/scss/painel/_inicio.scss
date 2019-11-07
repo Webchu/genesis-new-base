@@ -87,6 +87,12 @@
 
     &.page-account-orderdetail {
         .wd-checkout-ordersummary {
+            .wd-checkout-basket-summary {
+                .grid {
+                    box-shadow: none;
+                }
+            }
+
             .wd-checkout-ordernumber {
                 .order-link {
                     display: none;
