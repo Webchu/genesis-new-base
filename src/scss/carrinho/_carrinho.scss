@@ -244,7 +244,7 @@
                 .js-shipping-calc {
                     width: 90px;
                     padding: 1em;
-                    float: right;
+                    float: unset;
                     @include round-left(0);
 
                     @include grid-media($grid-smartphone) {
